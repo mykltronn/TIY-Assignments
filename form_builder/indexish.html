@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Web App Signup</title>
+
+  </head>
+
+  <body>
+    <main class="main-box">
+
+      <div class="heading-box">
+        <h1>Sign Up For My Web App</h1>
+      </div>
+
+      <div class="form-box">
+
+        <form class="form-actual" action="index.html" method="post">
+          <fieldset>
+            <!-- first name -->
+            <input id="fname-input" type="text" name="name" value="First Name">
+            <!-- last name -->
+            <input id="lname-input"type="text" name="lastname" value="Last Name">
+            <!-- email -->
+            <input id="email-input"type="text" name="email" value="Email address">
+            <!-- website -->
+            <input id="website-input"type="url" name="website" value="Current website url">
+          </fieldset>
+
+          <select id="language-input" name="language" value="Select language...">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+
+          <fieldset>
+            <!-- comments -->
+            <input type="textarea" name="comments" value="Your comment">
+          </fieldset>
+
+          <fieldset>
+            <!-- mobile -->
+            <input type="tel" name="mobilephone" value="Mobile number">
+            <!-- home phone -->
+            <input type="tel" name="homephone" value="Home number">
+          </fieldset>
+
+          <div class="button-box">
+            <!-- submit button -->
+            <input type="submit">
+          </div>
+
+        </form> <!-- close .form-actual -->
+      </div> <!-- close .form-box -->
+    </main> <!-- close .main-box -->
+
+
+    <script src="main.js"></script>
+  </body>
+
+</html>
