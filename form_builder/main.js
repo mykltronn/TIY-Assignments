@@ -19,6 +19,8 @@ var formObject = document.getElementById('form-actual')
 
 //create fo0!
 
+//REMEMBER TO walk through loops semantically if they aren't making sense
+
 
 for (i = 0; i <formData.length; i++) {
   if (formData[i].type != "select") {
