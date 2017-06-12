@@ -27,7 +27,9 @@ Scope
 })();
 /*************************************************************************************
 ------------ ANSWER -------------------
+NO.
 
+NO THEY ARE NOT. They're the opposite.
 **************************************************************************************/
 
 
@@ -58,7 +60,11 @@ Hoisting
 })();
 /*************************************************************************************
 ------------ ANSWER -------------------
+console.log(x);
+will print undefined because JS will hoist the declaration to the top, but not the definition.
 
+console.log(y);
+will throw an error because there is no y variable. I think maybe you ment console.log(foo()); which will return "function hoisting";
 **************************************************************************************/
 
 
@@ -72,11 +78,13 @@ Date Object
 - Declare a variable 'todayIs'.
 - Using the date constructor, it should print today's date.
 **************************************************************************************/
-(function(testerOne){
+(function(){
   "use strict";
   //YOUR CODE HERE
+  var todayIs;
+  todayIs = new Date();
   console.assert(todayIs == today, "#3 Test failed. Did you set the date correctly?");
-})(testerOne);
+})();
 
 
 
@@ -97,6 +105,8 @@ Warm up
 //console.log(add);
 /**************************************************************************************
 ------------ ANSWER -------------------
+running it inside the functino will return 4. Running it outside the function will return an error because add does not exist outside of the function
+
 
 **************************************************************************************/
 
@@ -114,12 +124,12 @@ Hoisting
 **************************************************************************************/
 (function(){
   "use strict";
-  var date = new Date(birthday);
+  var date = new Date(5, 21, 1983).getTime();
   var birthday;
-  bdayMsg();
   var bdayMsg = function(){
     return "You were born on " + date.toDateString();
   }
+  bdayMsg();
   console.log("#5 bdayMsg()", bdayMsg());
   console.assert(bdayMsg() == "You were born on Thu Apr 21 1983", "#5 Test failed. Check function hoisting." )
 })();
@@ -137,6 +147,10 @@ Date object
 **************************************************************************************/
 (function(testerTwo){
   "use strict";
+
+  var stringDate = new Date().toString();
+
+
   var today = new Date();
   console.log("#6 stringDate", stringDate)
   console.assert(stringDate == testerTwo, "#6 Test Failed. Did you set stringDate correctly?")
@@ -162,11 +176,9 @@ Hoisting
 (function(){
   "use strict";
 
-  pizza.pizzaMkr();
-
   var pizza = {
-    sauce: "",
-    orderNow: "",
+    sauce: true,
+    orderNow: true,
     pizzaMkr: function(){
       if (pizza.orderNow == true && pizza.sauce == true){
         return "We are making your pizza with " + this.sauceType + " and " + this.protein + ". Pickup in 20 minutes."
@@ -176,6 +188,11 @@ Hoisting
       }
     }
   }
+  pizza.sauceType = 'tomato';
+  pizza.protein = 'chicken'
+  pizza.pizzaMkr();
+
+
 
   console.log("# 7 pizza.pizzaMrk()", pizza.pizzaMkr());
   console.assert(pizza.pizzaMkr() == "We are making your pizza with tomato and chicken. Pickup in 20 minutes.", "#7 Test failed. Did you add the propeties? Did you set the values correctly? Did you fix the hoisting issues?")
@@ -207,61 +224,81 @@ HINTS:
 
   var goodStanding = false;
   var monthsActive = 2;
-  
+
   //Do not modify 'name' globaly.
   var name = null;
-  
-  accountCheck();
-  
+
   var benefit = {}
+  benefit.credit = 50;
+  benefit.discount = 5;
+
   //Add properties to 'benefit' using braket notation
 
-  var accountCheck = function() {
+  (function() {
+    "use strict";
 
-    var greeting = function() {
+    var goodStanding = true;
+    var monthsActive = 18;
 
-      return "Hello " + name + ". Here is the status of your account."
-    }
-    
-    function accountStat() {
-      
-      if (goodStanding == true && monthsActive >= 12) {
-        
-        return offerDiscount(name);
+    //Do not modify 'name' globaly.
+    var name = null;
 
-      } else if (goodStanding == false) {
-        
-        return "Please make a payment within 7 days or your service will be terminated, forever."
+    var benefit = {}
+    benefit.credit = 50;
+    benefit.discount = 5;
 
-      } else if (monthsActive <= 12) {
+    //Add properties to 'benefit' using braket notation
 
-        var timeFrame = 12 - monthsActive;
-        var months;
+    function accountCheck() {
+      name = "James";
 
-        if (timeFrame == 1) {
-        
-          months = "month";
-        } else {
-        
-          months = "months"
+      function greeting() {
+
+        return "Hello " + name + ". Here is the status of your account."
+      }
+
+      function accountStat() {
+
+        if (goodStanding == true && monthsActive >= 12) {
+
+          return offerDiscount(name);
+
+        } else if (goodStanding == false) {
+
+          return "Please make a payment within 7 days or your service will be terminated, forever."
+
+        } else if (monthsActive <= 12) {
+
+          var timeFrame = 12 - monthsActive;
+          var months;
+
+          if (timeFrame == 1) {
+
+            months = "month";
+          } else {
+
+            months = "months"
+          }
+
+          return "You are " + timeFrame + " " + months + " from getting a special discount!"
         }
-        
-        return "You are " + timeFrame + " " + months + " from getting a special discount!"
-      }
 
-      function offerDiscount() {
+        function offerDiscount() {
 
-        return "Thank you for your loyalty. You've been a member for " + monthsActive + " " + "months . You next bill will reflect a $" + benefit.credit + " credit and a " + benefit.discount + "% discount going forward.";
+          return "Thank you for your loyalty. You've been a member for " + monthsActive + " " + "months . You next bill will reflect a $" + benefit.credit + " credit and a " + benefit.discount + "% discount going forward.";
+        }
       }
+      //Here 'accountCheck' should return both the 'greeting' output and the 'accountStat' output.
+      return greeting() + " " +  accountStat();
     }
-    //Here 'accountCheck' should return both the 'greeting' output and the 'accountStat' output.
-  }
 
-  console.log("#8 accountCheck():", accountCheck());
-  console.assert(name == "James", "Test failed. You should set 'name' to 'james' from within accountCheck()");
-  console.assert(accountCheck() == "Hello James. Here is the status of your account. Thank you for your loyalty. You've been a member for 18 months . You next bill will reflect a $50 credit and a 5% discount going forward.", "Test failed. It returned: " + accountCheck());
+    accountCheck();
 
-})();
+    console.log("#8 accountCheck():", accountCheck());
+    console.assert(name == "James", "Test failed. You should set 'name' to 'james' from within accountCheck()");
+    console.assert(accountCheck() == "Hello James. Here is the status of your account. Thank you for your loyalty. You've been a member for 18 months . You next bill will reflect a $50 credit and a 5% discount going forward.", "Test failed. It returned: " + accountCheck());
+
+  })();
 
 
 
