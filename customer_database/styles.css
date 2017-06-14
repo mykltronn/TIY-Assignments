@@ -1,0 +1,74 @@
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-family: Raleway;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+}
+
+
+
+h1 {
+  text-align: center;
+  margin: 60px;
+  font-size: 50px;
+}
+
+#customers {
+  width: 90vw;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+ul {
+  width: 350px;
+}
+
+.image img {
+  height: 350px;
+  box-shadow: 2px 2px 1px 1px lightgrey;
+}
+
+.name {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+  /*vv not great vv*/
+  margin: 0px 0px 20px 100px;
+  padding: 15px 0px 5px 0px;
+  border-bottom: 2px solid #7FC6A0;
+}
+
+.email {
+  text-align: center;
+  font-size: 16px;
+  color: lightgrey;
+  margin: 10px
+}
+
+.address {
+  text-align: center;
+  color: grey;
+  line-height: 2;
+}
+
+.phone {
+  text-align: center;
+  color: grey;
+}
+
+.id {
+  text-align: center;
+  /*color: #7FC6A0;*/
+  color: transparent;
+  text-shadow: rgba(0, 0, 0, 0.95) 0px 0px 10px;
+  margin: 20px;
+
+
+}
