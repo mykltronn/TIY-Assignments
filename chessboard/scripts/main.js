@@ -35,5 +35,34 @@
 // r,n,b,q,k,b,n,r
 
 
+
+
 //question is, how to turn a 2D array in to commands for html objects
 // the
+
+
+for (row = 0; row < 9; ) {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// *********************
