@@ -1,0 +1,70 @@
+
+body {
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #f00;
+}
+
+
+.octocat {
+  display: inline-block;
+  border-bottom: solid 1px #D3D3D3;
+}
+
+/*V the big images V*/
+.octocat img {
+  border: solid 1px #D3D3D3;
+  border-radius: 5px;
+  width: 350px;
+  margin: 15px;
+}
+
+/*V the little images V*/
+.authors img {
+  border-style: solid 1px #D3D3D3;
+  width: 40px;
+  margin: 0px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+/*the texty bits*/
+.image-caption {
+  display: inline;
+}
+
+.image-caption ul {
+  display: inline-block;
+}
+
+/*
+li {
+  text-align: right;
+  display: inline-block;
+}
+*/
+
+ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0px;
+
+}
+
+.image-number {
+  float: left;
+}
+
+.image-caption {
+  float: right;
+}

@@ -1,0 +1,237 @@
+/*
+
+    COLORS
+
+    Pink   : #ffdddd
+    Purple : #ddddff
+    Green  : #ddffdd
+    Blue   : #ddffff
+    Yellow : #ffffdd
+
+    BREAKPOINTS
+
+    600px
+    1100px
+
+*/
+
+body{
+    font-family: Palatino, Times, serif;
+    background-color: #ddffdd;
+    margin: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+ul{
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+h1, h2, h3{
+    color: #009999;
+}
+
+h2, h3{
+    margin-bottom: 0;
+}
+
+a{
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+}
+
+
+header{
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddddff;
+}
+
+#site_container{
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#main_nav{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 20%;
+}
+
+#main_nav a{
+    display: block;
+    padding: 10px 2%;
+    background: #ffdddd;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#main_nav a:hover{
+    background: #ddddff;
+}
+
+/*^^ Universal ^^ */
+/* vv Mobile vv */
+
+
+/*Child One .site_container header*/
+header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+
+#main_nav {
+  width: 100%;
+}
+
+/*Child Two, #main_content */
+
+
+#main_content {
+  background-color: #ddffff;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#main_content div {
+  width: 100%;
+}
+
+/* Child Three, #sidebar_content */
+
+#sidebar_content{
+  background-color: #ffffdd;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 7px;
+
+}
+
+#sidebar_content div {
+  width: 100%;
+}
+
+#site_footer{
+  background-color: #FFDDAA;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+
+#site_footer nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+/* vv Tablet vv */
+
+@media screen and (min-width: 600px) {
+
+  body {
+    background-color: pink;
+  }
+
+  /*Child One .site_container header*/
+
+
+  #main_nav a {
+    width: 25%;
+  }
+
+  #site_container header {
+
+  }
+
+  #logo {
+  }
+
+  /*Child Two, #main_content */
+
+  #main_content div {
+    width: 100%;
+  }
+
+
+  /* Child Three, #sidebar_content */
+  #sidebar_content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #sidebar_content div {
+
+  }
+}
+
+
+
+
+/* vv Desktop vv */
+
+
+@media screen and (min-width: 1100px) {
+  body {
+    background-color: yellow;
+  }
+  /*Child One .site_container header*/
+
+  header {
+    flex-wrap: nowrap;
+  }
+
+  #logo {
+    width: 30%;
+  }
+
+  #main_nav {
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  /*Child Two, #main_content */
+
+
+  #main_content div {
+    width: 50%;
+  }
+
+
+  /* Child Three, #sidebar_content */
+  #sidebar_content {
+
+  }
+}
+
+
+
+
+
+
+
+
+/*white space maker*/

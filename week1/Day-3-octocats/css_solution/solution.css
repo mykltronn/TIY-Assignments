@@ -1,0 +1,99 @@
+body {
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.octodex {
+	font-family: sans-serif;
+}
+
+.octocat {
+	display: inline-block;
+	max-width: 358px;
+	padding: 15px;
+	text-align: left;
+	float: left;
+}
+
+.octocat>a img {
+	width: 100%;
+	border: 1px solid #cacaca;
+	border-radius: 5px;
+}
+
+.image-caption {
+	position: relative;
+	right: 5px;
+}
+
+.image-caption a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.image-caption span {
+	color: #cacaca;
+}
+
+.image-footer img {
+	height: 28px;
+	width: 28px;
+	margin: -4px -4px;
+	border-radius: 3px;
+}
+
+.image-number {
+	color: #cacaca;
+}
+
+.image-footer {
+	width: 100%;
+	height: 45px;
+	display: inline-block;
+	border-bottom: solid #cacaca 1px;
+}
+
+.image-footer {
+	font-size: 15px;
+	font-weight: bold;
+	position: relative;
+}
+
+.image-number {
+	float: left;
+}
+
+.image-caption {
+	float: right;
+}
+
+ul .authors {
+	display: inline-block;
+	float: right;
+	margin: -2px 0 0 -25px
+}
+
+ul {
+	list-style-type: none;
+}
+
+.image-footer:before {
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 0;
+	border: 10px solid transparent;
+	border-top-color: #cacaca;
+	right: 5px;
+	top: -5px;
+	position: absolute;
+}
+
+.image-number:before {
+	content: "#"
+}
+
+.image-number, .image-caption {
+	margin: 12px 0 0 0;
+}

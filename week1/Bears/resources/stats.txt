@@ -1,0 +1,31 @@
+Navigation Links : 
+- Text : "Home",         href: "index.html" 
+- Text : "Bear Species", href: "species.html" 
+- Text : "Bear Stats",   href: "stats.html" 
+
+Bears
+
+Image source: "https://placebear.com/500/200"
+
+Bear Stats
+
+Bears pretty much do as they please and they live all over the world. Here are some neato bear stats:
+
+Scientific name:
+Ursidae
+
+Speed:
+25 mph (Polar bear)
+
+Lifespan:
+20 years (Giant panda)
+
+Mass:
+
+150 – 220 lbs (Giant panda), 990 lbs (Polar bear), 240 lbs (American black bear), 180 – 1,300 lbs (Brown bear)
+
+Height:
+2–3 ft. (Giant panda), 6.6 ft. (Polar bear), 2.3–5 ft. (Brown bear)
+
+Did you know:
+There is some debate about the largest bear in the world.

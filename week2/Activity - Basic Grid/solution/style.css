@@ -1,0 +1,64 @@
+body{
+    font-family: Lucida Sans Typewriter, Lucida Console, monaco, monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+}
+li{
+    padding: 4%;
+    background: #bff;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+li:last-child{
+    margin-bottom: 0;
+}
+li li{
+    background: white;
+}
+
+@media screen and ( min-width: 700px ){
+    ul{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    li{
+        padding: 2%;
+        margin: 5px;
+        flex: 1 1 44.2%;
+        background: #fcf;
+    }
+    .inner{
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and ( min-width: 1000px ){
+    li{
+        flex: 1 0 10%;
+        order: 1;
+        background: #ff9;
+    }
+    li ul{
+
+        flex-wrap: nowrap;
+    }
+    li li{
+        flex: 0 1 20%;
+    }
+    .inner{
+        order: 0;
+    }
+}

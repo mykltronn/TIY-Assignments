@@ -1,0 +1,149 @@
+a:visited{
+  color: black;
+}
+
+@font-face {
+  font-family: Oleo Script;
+  font-style: normal;
+  font-weight: 400;
+  src:url(http://fonts.gstatic.com/s/oleoscript/v5/_weQNDK6Uf40CiGFKBBUjogp9Q8gbYrhqGlRav_IXfk.woff2);
+}
+
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  src:url(http://fonts.gstatic.com/s/poiretone/v4/HrI4ZJpJ3Fh0wa5ofYMK8QzyDMXhdD8sAj6OAJTFsBI.woff2);
+}
+
+body {
+  margin: 0px;
+}
+
+
+.main-heading { /* "Swamp Rabbit Cycling" */
+  font-family: 'Poiret One';
+  font-style: normal;
+  text-align: center;
+  font-size: 75px;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
+}
+
+header {
+    background-image:url('../img/header-background.jpg');
+    float: left;
+    margin:0 0 30px 0;
+    padding: 5px 0 0 0 ;
+    height: 520px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+  }
+
+.subheader-wrapper { /* "Bringing you the best..."*/
+  font-family: Oleo Script;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.logo {
+}
+
+.header-wrapper {
+  width: 850px;
+  height: 265px;
+  background-image: url('../img/logo.png');
+  filter: invert(100%);
+  background-size:  200px 260px;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
+}
+
+
+.divider {
+  width: 65%;
+  border-color: black;
+  background-color: black;
+}
+
+.single-img-card {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+}
+
+.site-imgs {
+  text-align: center;
+}
+
+#left-img {
+  background-image: url('../img/left-img.jpg');
+  box-shadow: 5px 5px 3px #888888;
+}
+
+#middle-img {
+  background-image: url('../img/middle-img.jpg');
+  box-shadow: 5px 5px 3px #888888;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#right-img {
+  background-image: url('../img/right-img.jpg');
+  box-shadow: 5px 5px 3px #888888;
+}
+
+.callout-wrapper { /*From mountain bikes to kid training...*/
+  background-color: #5A976E;
+}
+
+.primary-text { /*From mountain bikes to kid training...*/
+  font-family: 'Poiret One';
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.75);
+  filter: invert(100%);
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.callout-msg {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.contact-wrapper {
+  font-family: 'Poiret One';
+  text-align: center;
+  font-size: 24px;
+}
+
+.contact-email {
+  font-size: 38px;
+  margin-top: 15px;
+}
+
+
+
+.footer-wrapper {
+  background-color: #333333;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 3%;
+}
+
+.site-footer-text {
+  font-size: 14px;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
